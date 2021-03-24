@@ -1,0 +1,36 @@
+.trackerDesc {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  width: 35rem;
+  margin-top: 30px;
+}
+button {
+  border: none;
+}
+
+.input {
+  width: 35rem;
+  height: 2.2rem;
+  border: none;
+}
+.input:focus {
+  outline: 0;
+}
+.inputBtn {
+  height: 2.5rem;
+  min-width: 4rem;
+  background: mediumaquamarine;
+  margin-left: -3rem;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  white-space: nowrap;
+  line-height: 2rem;
+}
+.descList {
+  margin-top: 25px;
+}
+.descList > li {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,14 @@
+.reset {
+  margin: 0.5rem 1rem;
+  width: 7rem;
+  height: 2rem;
+  color: #fff;
+  border: none;
+  background: lightsteelblue;
+  font-size: 1.2rem;
+}
+.reset:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in;
+}

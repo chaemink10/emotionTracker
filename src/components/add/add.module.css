@@ -1,0 +1,25 @@
+.add {
+  padding: 1rem;
+  margin-bottom: 50px;
+}
+input {
+  width: 15rem;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+.btn {
+  height: 2.2rem;
+  background: mediumpurple;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+.btn:hover {
+  background: mediumslateblue;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in;
+}
