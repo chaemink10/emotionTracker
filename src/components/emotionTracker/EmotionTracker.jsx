@@ -12,19 +12,19 @@ const EmotionTracker = ({ firebase }) => {
   useEffect(() => {
     const loaded = firebase.load((result) => {
       setTracker(result);
+      setTrackerTotalCount(Object.keys(result).length);
     });
-    tracker && setTrackerTotalCount(Object.keys(tracker).length);
     return () => loaded();
-  }, [firebase, tracker]);
+  }, [firebase]);
 
   //Add & Update
-  const onUpdate = (add) => {
+  const onUpdate = (update) => {
     setTracker((tracker) => {
-      const updated = { ...tracker };
-      updated[add.id] = add;
-      return updated;
+      const updatedTracker = { ...tracker };
+      updatedTracker[update.id] = update;
+      return updatedTracker;
     });
-    firebase.save(add);
+    firebase.save(update);
   };
 
   //Delete

@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   border: 1px solid #f0f0f0;
-  width: 35rem;
   margin-top: 30px;
+  width: 35rem;
 }
 button {
   border: none;
@@ -19,12 +19,11 @@ button {
 }
 .inputBtn {
   height: 2.5rem;
-  min-width: 4rem;
+  width: 3rem;
   background: mediumaquamarine;
   margin-left: -3rem;
   color: #fff;
-  font-size: 1rem;
-  padding: 0 1.5rem;
+  font-size: 1.5rem;
   white-space: nowrap;
   line-height: 2rem;
 }
@@ -33,4 +32,19 @@ button {
 }
 .descList > li {
   margin-bottom: 10px;
+}
+.deleteBtn {
+  margin-left: 10px;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.deleteBtn:hover {
+  cursor: pointer;
+}
+.blind {
+  display: none;
 }

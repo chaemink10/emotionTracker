@@ -6,7 +6,10 @@ const DescriptionConts = ({ tracker, onUpdate }) => {
   return (
     <>
       {tracker.description && (
-        <DescriptionList tracker={tracker}></DescriptionList>
+        <DescriptionList
+          tracker={tracker}
+          onUpdate={onUpdate}
+        ></DescriptionList>
       )}
       <DescriptionInput
         tracker={tracker}

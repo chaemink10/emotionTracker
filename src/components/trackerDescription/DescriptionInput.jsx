@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { uid } from 'uid';
 import style from './trackerDescription.module.css';
 
 const DescriptionInput = ({ tracker, onUpdate }) => {
@@ -7,8 +8,17 @@ const DescriptionInput = ({ tracker, onUpdate }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    const inputDesc = inputRef.current.value;
-    const trackerDesc = [...tracker.description, inputDesc];
+    let inputDesc = []; //Description Text
+    let trackerDesc = []; //Updated Description Array
+
+    inputDesc['text'] = inputRef.current.value;
+    inputDesc['id'] = uid();
+
+    if (tracker.description) {
+      trackerDesc = [...tracker.description, inputDesc];
+    } else {
+      trackerDesc = [inputDesc];
+    }
     const updated = { ...tracker, description: trackerDesc };
     inputDesc && onUpdate(updated);
     formRef.current.reset();
@@ -24,7 +34,7 @@ const DescriptionInput = ({ tracker, onUpdate }) => {
           ref={inputRef}
         ></input>
         <button type='submit' className={style.inputBtn}>
-          {tracker.emotion}
+          +
         </button>
       </div>
     </form>
