@@ -6,7 +6,7 @@ const DescriptionList = memo(({ tracker, onUpdate }) => {
   const idRef = useRef();
   const descList = tracker.description;
 
-  const onDescDelete = (test) => {
+  const onDescDelete = () => {
     const updatedDesc = descList.filter((desc) => {
       return desc.id !== idRef.current.value;
     });

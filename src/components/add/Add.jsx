@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { uid } from 'uid';
 import style from './add.module.css';
 
-const Add = ({ onUpdate }) => {
+const Add = ({ onAddEmotion }) => {
   const formRef = useRef();
   const inputRef = useRef();
 
@@ -14,7 +14,7 @@ const Add = ({ onUpdate }) => {
       count: 0,
       description: [],
     };
-    inputRef.current.value && onUpdate(addTracker);
+    inputRef.current.value && onAddEmotion(addTracker);
     formRef.current.reset();
   };
   return (
