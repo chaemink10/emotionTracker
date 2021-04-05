@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/emotionTracker/static/css/main.377c3b10.chunk.css",
-    "main.js": "/emotionTracker/static/js/main.cb756593.chunk.js",
-    "main.js.map": "/emotionTracker/static/js/main.cb756593.chunk.js.map",
+    "main.css": "/emotionTracker/static/css/main.304f1444.chunk.css",
+    "main.js": "/emotionTracker/static/js/main.a13a588d.chunk.js",
+    "main.js.map": "/emotionTracker/static/js/main.a13a588d.chunk.js.map",
     "runtime-main.js": "/emotionTracker/static/js/runtime-main.fa43bbdd.js",
     "runtime-main.js.map": "/emotionTracker/static/js/runtime-main.fa43bbdd.js.map",
-    "static/js/2.e2a07c98.chunk.js": "/emotionTracker/static/js/2.e2a07c98.chunk.js",
-    "static/js/2.e2a07c98.chunk.js.map": "/emotionTracker/static/js/2.e2a07c98.chunk.js.map",
+    "static/js/2.daaa97bc.chunk.js": "/emotionTracker/static/js/2.daaa97bc.chunk.js",
+    "static/js/2.daaa97bc.chunk.js.map": "/emotionTracker/static/js/2.daaa97bc.chunk.js.map",
     "static/js/3.6333a3a1.chunk.js": "/emotionTracker/static/js/3.6333a3a1.chunk.js",
     "static/js/3.6333a3a1.chunk.js.map": "/emotionTracker/static/js/3.6333a3a1.chunk.js.map",
     "index.html": "/emotionTracker/index.html",
-    "static/css/main.377c3b10.chunk.css.map": "/emotionTracker/static/css/main.377c3b10.chunk.css.map",
-    "static/js/2.e2a07c98.chunk.js.LICENSE.txt": "/emotionTracker/static/js/2.e2a07c98.chunk.js.LICENSE.txt"
+    "static/css/main.304f1444.chunk.css.map": "/emotionTracker/static/css/main.304f1444.chunk.css.map",
+    "static/js/2.daaa97bc.chunk.js.LICENSE.txt": "/emotionTracker/static/js/2.daaa97bc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fa43bbdd.js",
-    "static/js/2.e2a07c98.chunk.js",
-    "static/css/main.377c3b10.chunk.css",
-    "static/js/main.cb756593.chunk.js"
+    "static/js/2.daaa97bc.chunk.js",
+    "static/css/main.304f1444.chunk.css",
+    "static/js/main.a13a588d.chunk.js"
   ]
 }
