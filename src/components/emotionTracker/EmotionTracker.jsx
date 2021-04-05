@@ -61,9 +61,7 @@ const EmotionTracker = ({ firebase }) => {
     <>
       <Header trackerTotalCount={trackerTotalCount}></Header>
       <Add onAddEmotion={onAddEmotion}></Add>
-      {emotion.keys && (
-        <Emotion emotion={emotion} onUpdate={onUpdate}></Emotion>
-      )}
+      <Emotion emotion={emotion} onUpdate={onUpdate}></Emotion>
       {tracker && (
         <Tracker
           tracker={tracker}
