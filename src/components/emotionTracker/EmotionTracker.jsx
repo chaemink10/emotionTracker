@@ -4,6 +4,7 @@ import Add from '../add/Add';
 import Tracker from '../trackerList/Tracker';
 // import Reset from '../reset/Reset';
 import { useEffect, useState } from 'react';
+import Emotion from '../emotion/Emotion';
 
 const EmotionTracker = ({ firebase }) => {
   const [trackerTotalCount, setTrackerTotalCount] = useState(0);
@@ -39,6 +40,7 @@ const EmotionTracker = ({ firebase }) => {
     <>
       <Header trackerTotalCount={trackerTotalCount}></Header>
       <Add onUpdate={onUpdate}></Add>
+      <Emotion></Emotion>
       {tracker && (
         <Tracker
           tracker={tracker}

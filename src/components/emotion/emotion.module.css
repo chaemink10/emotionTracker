@@ -1,0 +1,21 @@
+.emotionList {
+  padding: 1rem;
+  margin: 0 0 3rem 1px;
+}
+.emotionList li {
+  display: inline-block;
+}
+.emotionButton {
+  font-size: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease-in;
+  margin-left: -1px;
+  padding: 0.2rem 1rem;
+}
+.emotionButton:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background: mediumaquamarine;
+  color: #fff;
+}
