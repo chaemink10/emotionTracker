@@ -19,6 +19,7 @@ const DescriptionList = memo(({ tracker, onUpdate }) => {
       {descList.map((desc) => (
         <li key={uid()}>
           {desc.text}
+          <span className={style.date}>{desc.date}</span>
           <input
             className={style.blind}
             ref={idRef}

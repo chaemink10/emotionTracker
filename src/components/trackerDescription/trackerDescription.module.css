@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   border: 1px solid #f0f0f0;
-  margin-top: 30px;
+  margin-top: 10px;
   width: 35rem;
 }
 button {
@@ -23,15 +23,21 @@ button {
   background: mediumaquamarine;
   margin-left: -3rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1em;
   white-space: nowrap;
-  line-height: 2rem;
+  padding-top: 2px;
 }
 .descList {
   margin-top: 25px;
 }
 .descList > li {
   margin-bottom: 10px;
+  color: #555;
+}
+.date {
+  color: #888;
+  font-size: 0.8rem;
+  margin-left: 25px;
 }
 .deleteBtn {
   margin-left: 10px;

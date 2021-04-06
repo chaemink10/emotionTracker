@@ -8,18 +8,29 @@ const DescriptionInput = ({ tracker, onUpdate }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    let inputDesc = []; //Description Text
     let trackerDesc = []; //Updated Description Array
+    const date = new Date();
 
-    inputDesc['text'] = inputRef.current.value;
-    inputDesc['id'] = uid();
+    const inputDesc = {
+      id: uid(),
+      text: inputRef.current.value,
+      date: `${date.getFullYear()}.${
+        date.getMonth() + 1
+      }.${date.getDate()}.${new Intl.DateTimeFormat('ko-KR', {
+        weekday: 'short',
+      }).format(date)}`,
+    };
 
     if (tracker.description) {
       trackerDesc = [...tracker.description, inputDesc];
     } else {
       trackerDesc = [inputDesc];
     }
-    const updated = { ...tracker, description: trackerDesc };
+    const updated = {
+      ...tracker,
+      description: trackerDesc,
+    };
+
     inputDesc && onUpdate(updated);
     formRef.current.reset();
   };
@@ -34,7 +45,7 @@ const DescriptionInput = ({ tracker, onUpdate }) => {
           ref={inputRef}
         ></input>
         <button type='submit' className={style.inputBtn}>
-          +
+          <i className='fas fa-plus'></i>
         </button>
       </div>
     </form>

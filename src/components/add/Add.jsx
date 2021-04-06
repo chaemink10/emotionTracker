@@ -11,7 +11,6 @@ const Add = ({ onAddEmotion }) => {
     const addTracker = {
       id: uid(),
       emotion: inputRef.current.value,
-      count: 0,
       description: [],
     };
     inputRef.current.value && onAddEmotion(addTracker);
