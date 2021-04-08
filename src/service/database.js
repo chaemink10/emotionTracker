@@ -1,12 +1,12 @@
 import { database } from './firebase.js';
 
 class Database {
-  save(tracker) {
-    database.ref(`users/tracker/${tracker.id}`).set(tracker);
+  save(tracker, user) {
+    database.ref(`users/${user}/tracker/${tracker.id}`).set(tracker);
   }
 
-  load(onUpdate, serviceName) {
-    const ref = database.ref(`users/${serviceName}`);
+  load(onUpdate, serviceName, user) {
+    const ref = database.ref(`users/${user}/${serviceName}`);
     ref.on('value', (snapshot) => {
       const tracker = snapshot.val();
       tracker && onUpdate(tracker);
@@ -14,12 +14,12 @@ class Database {
     return () => ref.off();
   }
 
-  remove(deleteTracker) {
-    database.ref(`users/tracker/${deleteTracker.id}`).remove();
+  remove(deleteTracker, user) {
+    database.ref(`users/${user}/tracker/${deleteTracker.id}`).remove();
   }
 
-  saveEmotion(addEmotion) {
-    database.ref(`users/emotion/${addEmotion.id}`).set(addEmotion);
+  saveEmotion(addEmotion, user) {
+    database.ref(`users/${user}/emotion/${addEmotion.id}`).set(addEmotion);
   }
 }
 

@@ -1,6 +1,6 @@
 .header {
+  position: relative;
   width: 100%;
-  height: 5.5rem;
   background: palevioletred;
   padding: 1rem 1.2rem;
   display: flex;
@@ -26,4 +26,17 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+.logout {
+  position: absolute;
+  background: lightpink;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  height: 1.6rem;
+  font-size: 0.7rem;
+  padding: 0;
+}
+.logout:hover {
+  cursor: pointer;
 }

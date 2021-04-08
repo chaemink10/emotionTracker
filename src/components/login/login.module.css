@@ -1,0 +1,20 @@
+.login {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #f1f1f1;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 20rem;
+  border: 3px solid salmon;
+  border-radius: 20px;
+  background: #fff;
+}
+.box button {
+  display: block;
+}
