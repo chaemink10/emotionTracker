@@ -5,7 +5,7 @@ import Login from './components/login/Login';
 
 function App({ firebase, authService }) {
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename='/emotionTracker'>
       <Switch>
         <Route exact path={['/', '/login']}>
           <Login authService={authService} />
