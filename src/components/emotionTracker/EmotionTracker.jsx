@@ -20,7 +20,7 @@ const EmotionTracker = ({ firebase, authService }) => {
     authService.onAuthChange((user) => {
       if (user) {
         setUser(user.uid);
-        setUserName(user.displayName);
+        setUserName(user.displayName ? user.displayName : user.email);
       } else {
         history.push('/');
       }
