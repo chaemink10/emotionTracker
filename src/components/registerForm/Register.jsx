@@ -22,7 +22,7 @@ const Register = ({ authService, btnType }) => {
       })
       .catch((error) => {
         alert(error.message);
-        emailRef.current.value = '';
+        pwRef.current.value = '';
       });
   };
 

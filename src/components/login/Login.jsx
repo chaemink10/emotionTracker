@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import style from './login.module.css';
 import { useHistory } from 'react-router-dom';
-import Register from '../register/Register';
+import Register from '../registerForm/Register';
 
 const Login = ({ authService }) => {
   const history = useHistory();
