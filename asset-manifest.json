@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/emotionTracker/static/css/main.c73c6736.chunk.css",
-    "main.js": "/emotionTracker/static/js/main.d6bdad60.chunk.js",
-    "main.js.map": "/emotionTracker/static/js/main.d6bdad60.chunk.js.map",
+    "main.js": "/emotionTracker/static/js/main.e8b0957b.chunk.js",
+    "main.js.map": "/emotionTracker/static/js/main.e8b0957b.chunk.js.map",
     "runtime-main.js": "/emotionTracker/static/js/runtime-main.c458d6e8.js",
     "runtime-main.js.map": "/emotionTracker/static/js/runtime-main.c458d6e8.js.map",
     "static/js/2.e3328b9e.chunk.js": "/emotionTracker/static/js/2.e3328b9e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c458d6e8.js",
     "static/js/2.e3328b9e.chunk.js",
     "static/css/main.c73c6736.chunk.css",
-    "static/js/main.d6bdad60.chunk.js"
+    "static/js/main.e8b0957b.chunk.js"
   ]
 }
