@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import EmotionTracker from './components/emotionTracker/EmotionTracker';
 import Login from './components/login/Login';
-import RegisterConts from './components/register/RegisterConts';
+import NewRegister from './components/newRegister/NewRegister';
 
 function App({ firebase, authService }) {
   return (
@@ -12,7 +12,7 @@ function App({ firebase, authService }) {
           <Login authService={authService} />
         </Route>
         <Route path='/register'>
-          <RegisterConts authService={authService} />
+          <NewRegister authService={authService} />
         </Route>
         <Route path='/emotion'>
           <EmotionTracker firebase={firebase} authService={authService} />

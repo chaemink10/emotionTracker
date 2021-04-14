@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './login.module.css';
 import { useHistory } from 'react-router-dom';
-import Register from '../registerForm/RegisterForm';
+import RegisterInput from '../registerInput/RegisterInput';
 
 const Login = ({ authService }) => {
   const history = useHistory();
+  const [loginInfo, setLoginInfo] = useState();
 
   const goEmotion = (userId) => {
     history.push({
@@ -19,6 +20,7 @@ const Login = ({ authService }) => {
     });
   });
 
+  //Google, Github Login
   const onClick = (event) => {
     authService
       .login(event.target.outerText)
@@ -31,11 +33,50 @@ const Login = ({ authService }) => {
       });
   };
 
+  //회원가입 링크이동
+  const onLinkRegister = () => {
+    history.push({
+      pathname: '/register',
+    });
+  };
+
+  //Email, PW Login
+  const onLogin = () => {
+    loginInfo &&
+      authService
+        .onAccountLogin(loginInfo.email, loginInfo.password)
+        .then((result) => {
+          goEmotion(result.user.uid);
+        })
+        .catch((error) => {
+          alert(error.message);
+          // emailRef.current.value = '';
+        });
+  };
+
+  //Get Input Ref
+  const onGetRef = (getMail, getPw) => {
+    setLoginInfo({
+      email: getMail,
+      password: getPw,
+    });
+  };
+
   return (
     <div className={style.login}>
       <section className={style.box}>
         <h2>Your Emotion 😉</h2>
-        <Register authService={authService} btnType={'login'}></Register>
+        <RegisterInput
+          authService={authService}
+          onGetRef={onGetRef}
+          styleName={'loginInput'}
+        ></RegisterInput>
+        <button type='button' onClick={onLinkRegister} className={style.regbtn}>
+          Join
+        </button>
+        <button type='button' onClick={onLogin} className={style.loginbtn}>
+          Login
+        </button>
         <span className={style.otherTxt}>Or Sign Up Using</span>
         <div className={style.otherLogin}>
           <button type='button' onClick={onClick} className={style.googleBtn}>

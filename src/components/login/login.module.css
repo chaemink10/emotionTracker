@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
   width: 85%;
   height: 80%;
-  max-width: 25rem;
+  max-width: 24rem;
   max-height: 30rem;
   background: #d1c4e9;
   border-radius: 20px;
@@ -38,12 +38,12 @@
 }
 .otherLogin button {
   border-radius: 5rem;
-  width: 43%;
+  width: 48%;
   height: 2.4rem;
   margin-right: 10px;
   font-size: 0.8rem;
-
   vertical-align: middle;
+  background: #fff;
 }
 .otherLogin button:last-child {
   margin-right: 0;
@@ -81,4 +81,31 @@
 }
 .githubBtn:hover svg {
   color: #fff;
+}
+.loginbtn {
+  width: 100%;
+  height: 2.8rem;
+  box-sizing: border-box;
+  background: #9575cd;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin: 60px auto 0;
+}
+.loginbtn:hover {
+  background: #7e57c2;
+  cursor: pointer;
+  scale: 1.1;
+}
+.regbtn {
+  background: none;
+  text-align: right;
+  float: right;
+  margin: 10px 1rem 0 0;
+}
+.regbtn:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
