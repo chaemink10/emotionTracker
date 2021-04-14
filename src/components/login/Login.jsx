@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import style from './login.module.css';
 import { useHistory } from 'react-router-dom';
-import Register from '../registerForm/Register';
+import Register from '../registerForm/RegisterForm';
 
 const Login = ({ authService }) => {
   const history = useHistory();
@@ -31,26 +31,22 @@ const Login = ({ authService }) => {
       });
   };
 
-  //회원가입
-  const onRegister = () => {
-    history.push({
-      pathname: '/register',
-    });
-  };
-
   return (
     <div className={style.login}>
       <section className={style.box}>
+        <h2>Your Emotion 😉</h2>
         <Register authService={authService} btnType={'login'}></Register>
-        <button type='button' onClick={onRegister}>
-          회원가입
-        </button>
-        <button type='button' onClick={onClick}>
-          Google
-        </button>
-        <button type='button' onClick={onClick}>
-          Github
-        </button>
+        <span className={style.otherTxt}>Or Sign Up Using</span>
+        <div className={style.otherLogin}>
+          <button type='button' onClick={onClick} className={style.googleBtn}>
+            <i className='fab fa-google'></i>
+            Google
+          </button>
+          <button type='button' onClick={onClick} className={style.githubBtn}>
+            <i className='fab fa-github'></i>
+            Github
+          </button>
+        </div>
       </section>
     </div>
   );

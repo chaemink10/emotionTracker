@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useHistory } from 'react-router';
-// import style from './register.module.css';
+import style from './registerForm.module.css';
 
 const Register = ({ authService, btnType }) => {
   let emailRef = useRef();
@@ -38,8 +38,15 @@ const Register = ({ authService, btnType }) => {
       });
   };
 
+  //회원가입
+  const onLinkRegister = () => {
+    history.push({
+      pathname: '/register',
+    });
+  };
+
   return (
-    <div>
+    <div className={style.register}>
       <input type='email' ref={emailRef} placeholder='email'></input>
       <input type='password' ref={pwRef} placeholder='password'></input>
       {btnType === 'reg' ? (
@@ -47,9 +54,18 @@ const Register = ({ authService, btnType }) => {
           회원가입
         </button>
       ) : (
-        <button type='button' onClick={onLogin}>
-          로그인
-        </button>
+        <>
+          <button
+            type='button'
+            onClick={onLinkRegister}
+            className={style.regbtn}
+          >
+            회원가입
+          </button>
+          <button type='button' onClick={onLogin} className={style.loginbtn}>
+            로그인
+          </button>
+        </>
       )}
     </div>
   );
