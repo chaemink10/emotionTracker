@@ -2,8 +2,12 @@
   padding: 1rem;
 }
 .trackerName {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-right: 20px;
+  padding: 0.4rem 1.5rem;
+  background: lightpink;
+  border-radius: 3rem;
+  color: #fff;
 }
 .trackerList > li {
   margin-bottom: 30px;
@@ -22,8 +26,8 @@ li {
 .count {
   width: 1.7rem;
   height: 1.7rem;
-  background: lightpink;
-  color: #fff;
+  background: #fbe9e7;
+  color: lightpink;
   font-size: 1rem;
   border-radius: 50%;
   display: flex;
@@ -55,7 +59,7 @@ li {
   font-size: 0.8rem;
   width: 1.7rem;
   height: 1.7rem;
-  border-radius: 30%;
+  border-radius: 50%;
   color: #555;
   margin-left: 5px;
 }

@@ -72,7 +72,6 @@ const EmotionTracker = ({ firebase, authService }) => {
 
   //Add New Emotion
   const onAddEmotion = (add) => {
-    onUpdate(add);
     const addEmotion = {
       id: uid(),
       emotion: add.emotion,

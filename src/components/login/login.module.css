@@ -104,8 +104,10 @@
   text-align: right;
   float: right;
   margin: 10px 1rem 0 0;
+  font-size: 0.9rem;
 }
 .regbtn:hover {
   cursor: pointer;
   text-decoration: underline;
+  color: #673ab7;
 }

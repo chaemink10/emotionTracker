@@ -3,7 +3,8 @@
   padding: 0;
 }
 .title {
-  padding: 1rem 1rem 0.5rem;
+  display: inline-block;
+  padding: 1rem 0 0.8rem 1rem;
   font-size: 1.2rem;
 }
 .emotionList {
@@ -18,13 +19,23 @@
   background: #fff;
   border: 1px solid #ddd;
   transition: all 0.2s ease-in;
-  margin-left: -1px;
   padding: 0 1rem;
   height: 2.2rem;
+  border-radius: 3rem;
+  margin-right: 5px;
 }
 .emotionButton:hover {
   transform: scale(1.05);
   cursor: pointer;
-  background: mediumaquamarine;
+  background: #ef9a9a;
   color: #fff;
+  border: 1px solid #ef9a9a;
+}
+.editBtn {
+  background: none;
+  color: #999;
+  margin-left: 10px;
+}
+.editBtn:hover {
+  text-decoration: underline;
 }
