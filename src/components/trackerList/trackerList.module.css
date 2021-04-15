@@ -1,4 +1,6 @@
 .trackerList {
+  max-width: 50rem;
+  margin: 0 auto;
   padding: 1rem;
 }
 .trackerName {
@@ -10,6 +12,7 @@
   color: #fff;
 }
 .trackerList > li {
+  width: 100%;
   margin-bottom: 30px;
 }
 ul {
@@ -65,4 +68,11 @@ li {
 }
 .delete:hover {
   cursor: pointer;
+}
+.trackerTit {
+  color: #222;
+  font-size: 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding-left: 1rem;
 }

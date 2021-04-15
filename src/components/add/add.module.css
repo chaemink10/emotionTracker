@@ -1,5 +1,8 @@
 .add {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem 2rem;
 }
 input {
   width: 15rem;
@@ -21,4 +24,8 @@ input {
   cursor: pointer;
   transform: scale(1.05);
   transition: all 0.2s ease-in;
+}
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }

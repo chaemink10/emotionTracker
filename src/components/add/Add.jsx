@@ -18,6 +18,7 @@ const Add = ({ onAddEmotion }) => {
   };
   return (
     <section className={style.add}>
+      <h3 className={style.title}>오늘 느낀 Emotion을 추가하세요! 👧🏻</h3>
       <form ref={formRef}>
         <input
           type='text'

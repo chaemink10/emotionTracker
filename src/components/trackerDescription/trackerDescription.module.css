@@ -4,7 +4,7 @@
   border: 1px solid #f0f0f0;
   margin-top: 10px;
   width: 100%;
-  max-width: 35rem;
+  max-width: 50rem;
 }
 button {
   border: none;
@@ -37,7 +37,6 @@ button:hover {
   color: #333;
   padding-left: 10px;
   width: 100%;
-  max-width: 35rem;
 }
 .date {
   color: #888;

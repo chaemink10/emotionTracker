@@ -13,6 +13,7 @@ const EmotionTracker = ({ firebase, authService }) => {
   const [emotion, setEmotion] = useState({});
   const [user, setUser] = useState();
   const [userName, setUserName] = useState();
+  const [addEmotionCheck, setAddEmotionCheck] = useState();
   const history = useHistory();
 
   //Checking Login
@@ -83,6 +84,10 @@ const EmotionTracker = ({ firebase, authService }) => {
     authService.logout();
   };
 
+  const onCheck = (emotionID) => {
+    emotionID && setAddEmotionCheck(emotionID);
+  };
+
   return (
     <>
       <Header
@@ -91,12 +96,18 @@ const EmotionTracker = ({ firebase, authService }) => {
         userName={userName}
       ></Header>
       <Add onAddEmotion={onAddEmotion}></Add>
-      <Emotion emotion={emotion} onUpdate={onUpdate}></Emotion>
+      <Emotion
+        tracker={tracker}
+        emotion={emotion}
+        onUpdate={onUpdate}
+        onCheck={onCheck}
+      ></Emotion>
       {tracker && (
         <Tracker
           tracker={tracker}
           onDelete={onDelete}
           onUpdate={onUpdate}
+          addEmotionCheck={addEmotionCheck}
         ></Tracker>
       )}
     </>

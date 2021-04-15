@@ -1,16 +1,27 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import DescriptionConts from '../trackerDescription/DescriptionConts';
 import style from './trackerList.module.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 
-const TrackerList = memo(({ onDelete, onUpdate, tracker }) => {
+const TrackerList = memo(({ onDelete, onUpdate, tracker, addEmotionCheck }) => {
   //Click Delete
   const onClickDelete = () => {
     onDelete(tracker);
   };
 
+  //중복입력된 항목으로 Scroll
+  useEffect(() => {
+    const element = document.getElementById(tracker.emotionId);
+    addEmotionCheck &&
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest',
+      });
+  });
+
   return (
-    <li>
+    <li id={tracker.emotionId}>
       <div className={style.trackerSection}>
         <div className={style.trackerName}>{tracker.emotion}</div>
         <div className={style.count}>
