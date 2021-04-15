@@ -4,7 +4,7 @@ import style from './emotion.module.css';
 
 const Emotion = ({ emotion, onUpdate }) => {
   const onEdit = () => {
-    alert('Eidt 준비중! 🥲');
+    alert('Edit 준비중! 🥲');
   };
   return (
     <>
