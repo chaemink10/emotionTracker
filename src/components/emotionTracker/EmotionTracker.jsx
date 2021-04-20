@@ -85,6 +85,7 @@ const EmotionTracker = ({ firebase, authService }) => {
   };
 
   const onCheck = (emotionID) => {
+    console.log(emotionID);
     emotionID && setAddEmotionCheck(emotionID);
   };
 

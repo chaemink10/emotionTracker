@@ -11,14 +11,14 @@ const TrackerList = memo(({ onDelete, onUpdate, tracker, addEmotionCheck }) => {
 
   //중복입력된 항목으로 Scroll
   useEffect(() => {
-    const element = document.getElementById(tracker.emotionId);
+    const element = document.getElementById(addEmotionCheck);
     addEmotionCheck &&
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
         inline: 'nearest',
       });
-  });
+  }, [addEmotionCheck]);
 
   return (
     <li id={tracker.emotionId}>

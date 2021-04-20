@@ -15,7 +15,6 @@ const EmotionList = ({ tracker, emotion, onUpdate, onCheck }) => {
 
     if (addEmotion && addEmotion.length > 0) {
       alert('이미 추가된 Emotion이에요! 😅');
-      onCheck(emotion.id);
     } else {
       const addTracker = {
         id: uid(),
@@ -26,6 +25,7 @@ const EmotionList = ({ tracker, emotion, onUpdate, onCheck }) => {
       };
       onUpdate(addTracker);
     }
+    onCheck(emotion.id);
   };
 
   return (
