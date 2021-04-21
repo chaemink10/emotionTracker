@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import EmotionTracker from './components/emotionTracker/EmotionTracker';
 import Login from './components/login/Login';
 import NewRegister from './components/newRegister/NewRegister';
 
 function App({ firebase, authService }) {
   return (
-    <BrowserRouter basename='/emotionTracker'>
+    <HashRouter basename='/emotionTracker'>
       <Switch>
         <Route exact path={['/', '/login']}>
           <Login authService={authService} />
@@ -18,7 +18,7 @@ function App({ firebase, authService }) {
           <EmotionTracker firebase={firebase} authService={authService} />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
