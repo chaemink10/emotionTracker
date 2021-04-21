@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import style from './registerInput.module.css';
 
-const RegisterInput = ({ onGetRef, styleName }) => {
+const RegisterInput = ({ onGetRef, onLogin, styleName }) => {
   let emailRef = useRef();
   let pwRef = useRef();
 
@@ -11,8 +11,14 @@ const RegisterInput = ({ onGetRef, styleName }) => {
       onGetRef(emailRef.current.value, pwRef.current.value);
   };
 
+  const onKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      onLogin();
+    }
+  };
+
   return (
-    <div className={`${getStyle(styleName)}`}>
+    <div className={`${getStyle(styleName)}`} onKeyPress={onKeyPress}>
       <input
         type='email'
         ref={emailRef}

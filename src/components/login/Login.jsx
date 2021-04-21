@@ -70,6 +70,7 @@ const Login = ({ authService }) => {
           authService={authService}
           onGetRef={onGetRef}
           styleName={'loginInput'}
+          onLogin={onLogin}
         ></RegisterInput>
         <button type='button' onClick={onLinkRegister} className={style.regbtn}>
           Join
