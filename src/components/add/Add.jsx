@@ -19,6 +19,10 @@ const Add = ({ onAddEmotion }) => {
   return (
     <section className={style.add}>
       <h3 className={style.title}>오늘 느낀 Emotion을 추가하세요! 👧🏻</h3>
+      <p className={style.example}>
+        ex) 행복😍 <span className={style.orText}>또는</span> 슬픔😭{' '}
+        <span className={style.orText}>또는</span> 당황😳{' '}
+      </p>
       <form ref={formRef}>
         <input
           type='text'

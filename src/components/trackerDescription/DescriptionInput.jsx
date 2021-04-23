@@ -41,7 +41,7 @@ const DescriptionInput = ({ tracker, onUpdate }) => {
         <input
           type='text'
           className={style.input}
-          placeholder='Write your feelings in a row simply.'
+          placeholder='왜 그런 감정을 느꼈나요?'
           ref={inputRef}
         ></input>
         <button type='submit' className={style.inputBtn}>

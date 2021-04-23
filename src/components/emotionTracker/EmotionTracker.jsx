@@ -8,9 +8,9 @@ import { uid } from 'uid';
 import { useHistory } from 'react-router';
 
 const EmotionTracker = ({ firebase, authService }) => {
-  const [trackerTotalCount, setTrackerTotalCount] = useState(0);
-  const [tracker, setTracker] = useState({});
-  const [emotion, setEmotion] = useState({});
+  // const [trackerTotalCount, setTrackerTotalCount] = useState(0);
+  const [tracker, setTracker] = useState();
+  const [emotion, setEmotion] = useState();
   const [user, setUser] = useState();
   const [userName, setUserName] = useState();
   const [addEmotionCheck, setAddEmotionCheck] = useState();
@@ -33,7 +33,7 @@ const EmotionTracker = ({ firebase, authService }) => {
     const loaded = firebase.load(
       (result) => {
         setTracker(result);
-        setTrackerTotalCount(Object.keys(result).length);
+        // setTrackerTotalCount(Object.keys(result).length);
       },
       'tracker',
       user
@@ -85,24 +85,21 @@ const EmotionTracker = ({ firebase, authService }) => {
   };
 
   const onCheck = (emotionID) => {
-    console.log(emotionID);
     emotionID && setAddEmotionCheck(emotionID);
   };
 
   return (
     <>
-      <Header
-        trackerTotalCount={trackerTotalCount}
-        onLogout={onLogout}
-        userName={userName}
-      ></Header>
+      <Header onLogout={onLogout} userName={userName}></Header>
       <Add onAddEmotion={onAddEmotion}></Add>
-      <Emotion
-        tracker={tracker}
-        emotion={emotion}
-        onUpdate={onUpdate}
-        onCheck={onCheck}
-      ></Emotion>
+      {emotion && (
+        <Emotion
+          tracker={tracker}
+          emotion={emotion}
+          onUpdate={onUpdate}
+          onCheck={onCheck}
+        ></Emotion>
+      )}
       {tracker && (
         <Tracker
           tracker={tracker}

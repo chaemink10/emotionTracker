@@ -4,10 +4,14 @@ import style from './trackerList.module.css';
 
 const Tracker = memo(({ tracker, onDelete, onUpdate, addEmotionCheck }) => {
   return (
-    <>
-      <h2 className={style.trackerTit}>
-        왜 그런 감정을 느꼈는지 천천히 생각하여 기록해 보세요 ✍🏻
+    <section className={style.tracker}>
+      <h2 className={style.title}>
+        <span>왜 그런 감정을 느꼈나요?</span>
       </h2>
+      <p className={style.guide}>
+        <span className={style.tip}>Tip</span>왜 그런 감정을 느꼈나요? 천천히
+        생각하여 기록해 보세요✍🏻
+      </p>
       <ul className={style.trackerList}>
         {Object.keys(tracker).map((key) => {
           return (
@@ -21,7 +25,7 @@ const Tracker = memo(({ tracker, onDelete, onUpdate, addEmotionCheck }) => {
           );
         })}
       </ul>
-    </>
+    </section>
   );
 });
 

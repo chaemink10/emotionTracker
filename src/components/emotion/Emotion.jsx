@@ -7,9 +7,15 @@ const Emotion = ({ tracker, emotion, onUpdate, onCheck }) => {
     alert('Edit 준비중! 🥲');
   };
   return (
-    <>
-      <h3 className={style.title}>
-        Emotion을 클릭하면 세부감정을 작성할 수 있어요!
+    <section className={style.emotion}>
+      <h2 className={style.title}>
+        <span>
+          감정을 클릭해보세요!<i className='fas fa-heartbeat'></i>
+        </span>
+      </h2>
+      <h3 className={style.guide}>
+        <span className={style.tip}>Tip</span>Emotion을 클릭하면 세부감정을
+        작성할 수 있어요!
         <button type='button' onClick={onEdit} className={style.editBtn}>
           <i className='far fa-edit'></i>
         </button>
@@ -28,7 +34,7 @@ const Emotion = ({ tracker, emotion, onUpdate, onCheck }) => {
           );
         })}
       </ul>
-    </>
+    </section>
   );
 };
 
