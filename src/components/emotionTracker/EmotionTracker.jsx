@@ -80,6 +80,14 @@ const EmotionTracker = ({ firebase, authService }) => {
     firebase.saveEmotion(addEmotion, user);
   };
 
+  //Delete Emotion
+  const onDeleteEmotion = (deleteEmotion) => {
+    setEmotion((emotion) => {
+      Object.keys(emotion).filter((key) => key === deleteEmotion.id);
+    });
+    firebase.removeEmotion(deleteEmotion, user);
+  };
+
   const onLogout = () => {
     authService.logout();
   };
@@ -98,6 +106,7 @@ const EmotionTracker = ({ firebase, authService }) => {
           emotion={emotion}
           onUpdate={onUpdate}
           onCheck={onCheck}
+          onDeleteEmotion={onDeleteEmotion}
         ></Emotion>
       )}
       {tracker && (

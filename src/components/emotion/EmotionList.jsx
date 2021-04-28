@@ -2,7 +2,14 @@ import React, { useRef } from 'react';
 import { uid } from 'uid';
 import style from './emotion.module.css';
 
-const EmotionList = ({ tracker, emotion, onUpdate, onCheck }) => {
+const EmotionList = ({
+  tracker,
+  emotion,
+  onUpdate,
+  onCheck,
+  onDeleteEmotion,
+  edit,
+}) => {
   const btnRef = useRef();
 
   const onButtonClick = (event) => {
@@ -28,15 +35,26 @@ const EmotionList = ({ tracker, emotion, onUpdate, onCheck }) => {
     onCheck(emotion.id);
   };
 
+  const onClickDelete = () => {
+    onDeleteEmotion(emotion);
+  };
+
   return (
-    <button
-      type='button'
-      className={style.emotionButton}
-      onClick={onButtonClick}
-      ref={btnRef}
-    >
-      {emotion.emotion}
-    </button>
+    <div className={style.emotionTag}>
+      <button
+        type='button'
+        className={style.emotionButton}
+        onClick={onButtonClick}
+        ref={btnRef}
+      >
+        {emotion.emotion}
+      </button>
+      {edit && (
+        <span className={style.emotionDelete} onClick={onClickDelete}>
+          <i className='fas fa-times'></i>
+        </span>
+      )}
+    </div>
   );
 };
 

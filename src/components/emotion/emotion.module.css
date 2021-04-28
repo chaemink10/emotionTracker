@@ -4,7 +4,7 @@
 }
 .guide {
   display: block;
-  padding: 1rem 0 0.8rem 0;
+  padding: 1rem 0 1rem 0;
   font-size: 0.8rem;
   text-align: center;
   color: #555;
@@ -39,12 +39,15 @@
   color: #fff;
 }
 .editBtn {
+  position: absolute;
+  top: 10px;
+  right: 0;
   background: none;
   color: #999;
-  margin-left: 10px;
+  margin-right: 10px;
 }
-.editBtn:hover {
-  text-decoration: underline;
+.editBtn svg {
+  margin-right: 3px;
 }
 .tip {
   display: inline-block;
@@ -56,9 +59,10 @@
   margin-right: 4px;
 }
 .emotion {
+  position: relative;
   border-top: 1px solid #ddd;
   margin: 0 1em 3rem;
-  padding-top: 2.2rem;
+  padding-top: 3rem;
 }
 .title {
   text-align: center;
@@ -72,4 +76,23 @@
 .title svg {
   margin-left: 5px;
   color: plum;
+}
+.emotionTag {
+  position: relative;
+}
+.emotionDelete {
+  position: absolute;
+  right: 1px;
+  top: -3px;
+  display: inline-block;
+  border-radius: 50%;
+  background: darkgray;
+  width: 1.05rem;
+  height: 1.05rem;
+  text-align: center;
+  line-height: 0.9;
+}
+.emotionDelete svg {
+  color: #fff;
+  font-size: 0.75rem;
 }

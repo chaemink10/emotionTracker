@@ -21,6 +21,10 @@ class Database {
   saveEmotion(addEmotion, user) {
     database.ref(`users/${user}/emotion/${addEmotion.id}`).set(addEmotion);
   }
+
+  removeEmotion(deleteEmotion, user) {
+    database.ref(`users/${user}/emotion/${deleteEmotion.id}`).remove();
+  }
 }
 
 export default Database;

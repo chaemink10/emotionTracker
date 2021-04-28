@@ -9,6 +9,10 @@ input {
   height: 2rem;
   font-size: 1rem;
   padding: 0 0.5rem;
+  border: 1px solid #d1d1d1;
+}
+.input::placeholder {
+  color: #d9d9d9;
 }
 .btn {
   height: 2.2rem;
@@ -27,12 +31,12 @@ input {
 }
 .title {
   font-size: 1.2rem;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 .example {
   font-size: 0.9rem;
   color: #555;
-  margin: 20px 0 10px 0;
+  margin: 0 0 10px 0;
 }
 .orText {
   font-size: 0.7rem;

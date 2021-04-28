@@ -19,18 +19,19 @@ const Add = ({ onAddEmotion }) => {
   return (
     <section className={style.add}>
       <h3 className={style.title}>오늘 느낀 Emotion을 추가하세요! 👧🏻</h3>
-      <p className={style.example}>
+      {/* <p className={style.example}>
         ex) 행복😍 <span className={style.orText}>또는</span> 슬픔😭{' '}
         <span className={style.orText}>또는</span> 당황😳{' '}
-      </p>
+      </p> */}
       <form ref={formRef}>
         <input
           type='text'
-          placeholder='Add Your Emotion'
+          placeholder='ex) 놀람 😲 '
           ref={inputRef}
+          className={style.input}
         ></input>
         <button onClick={onSubmit} className={style.btn}>
-          Add
+          추가
         </button>
       </form>
     </section>
